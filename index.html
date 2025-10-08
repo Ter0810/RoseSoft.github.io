@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Igila Terngu Solomon - Web Developer & Data Scientist">
+    <meta name="keywords" content="web developer, data scientist, portfolio, frontend, backend">
+    <meta name="author" content="Igila Terngu Solomon">
+    
     <title>Igila Terngu Solomon - Portfolio</title>
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- AOS Animation Library -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="index.css">
+    
+    
 </head>
 <body>
     <!-- Navigation -->
@@ -36,6 +41,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -47,11 +57,11 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
                     <h1>Hi, I'm <span class="typing-effect">Igila Terngu Solomon</span></h1>
-                    <p class="lead">Web Developer & Data Scientist</p>
+                    <p class="lead">Software Engineer & Data Scientist</p>
                     <p class="mb-4">I create beautiful, responsive websites and applications that provide exceptional user experiences. Let's bring your ideas to life!</p>
                     <div class="hero-buttons">
                         <a href="#portfolio" class="btn btn-primary me-3">View My Work</a>
-                        <a href="images/Curiculum_Vitae.pdf.pdf" id="downloadCV" class="btn btn-outline-light me-3">Download CV</a>
+                        <a href="images/Curiculum_Vitae.pdf.pdf" target="_blank" id="downloadCV" class="btn btn-outline-light me-3">Download CV</a>
                         <a href="#contact" class="btn btn-outline-light">Get In Touch</a>
                     </div>
                 </div>
@@ -88,17 +98,16 @@
                             <div class="skill-item">
                                 <i class="fab fa-html5"></i>
                                 <h5>Frontend</h5>
-                                <p>HTML5, CSS3, JavaScript, React,Bootstrap</p>
+                                <p>HTML5, CSS3, JavaScript, React, Bootstrap</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="skill-item">
                                 <i class="fas fa-server"></i>
                                 <h5>Backend</h5>
-                                <p>Node.js, Django,Python, MongoDB, MySQL</p>
+                                <p>Node.js, Django, Python, MongoDB, MySQL</p>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -112,83 +121,79 @@
                 <h2>My Portfolio</h2>
                 <p class="lead">Some of my recent work</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="E-commerce Platform">
-                        <div class="portfolio-overlay">
-                            <a href="#" class="btn btn-light btn-sm">View Live</a>
-                            <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
-                        </div>
-                        <div class="p-3">
-                            <h5>E-commerce Platform</h5>
-                            <p class="text-muted">React, Node.js, MongoDB</p>
-                        </div>
+            
+            <div class="portfolio-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            
+            <div class="row portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="E-commerce Platform">
+                    <div class="portfolio-overlay">
+                        <a href="#" class="btn btn-light btn-sm">View Live</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
+                    </div>
+                    <div class="p-3">
+                        <h5>E-commerce Platform</h5>
+                        <p class="text-muted">React, Node.js, MongoDB</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop" alt="Task Management App">
-                        <div class="portfolio-overlay">
-                            <a href="#" class="btn btn-light btn-sm">View Live</a>
-                            <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
-                        </div>
-                        <div class="p-3">
-                            <h5>Task Management App</h5>
-                            <p class="text-muted">Vue.js, Express, MySQL</p>
-                        </div>
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop" alt="Task Management App">
+                    <div class="portfolio-overlay">
+                        <a href="#" class="btn btn-light btn-sm">View Live</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
+                    </div>
+                    <div class="p-3">
+                        <h5>Task Management App</h5>
+                        <p class="text-muted">Vue.js, Express, MySQL</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=250&fit=crop" alt="Restaurant Website">
-                        <div class="portfolio-overlay">
-                            <a href="#" class="btn btn-light btn-sm">View Live</a>
-                            <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
-                        </div>
-                        <div class="p-3">
-                            <h5>Restaurant Website</h5>
-                            <p class="text-muted">HTML5, CSS3, JavaScript</p>
-                        </div>
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="design" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=250&fit=crop" alt="Restaurant Website">
+                    <div class="portfolio-overlay">
+                        <a href="#" class="btn btn-light btn-sm">View Live</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
+                    </div>
+                    <div class="p-3">
+                        <h5>Restaurant Website</h5>
+                        <p class="text-muted">HTML5, CSS3, JavaScript</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=250&fit=crop" alt="Weather App">
-                        <div class="portfolio-overlay">
-                            <a href="#" class="btn btn-light btn-sm">View Live</a>
-                            <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
-                        </div>
-                        <div class="p-3">
-                            <h5>Weather Forecast App</h5>
-                            <p class="text-muted">React Native, API Integration</p>
-                        </div>
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=250&fit=crop" alt="Weather App">
+                    <div class="portfolio-overlay">
+                        <a href="#" class="btn btn-light btn-sm">View Live</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
+                    </div>
+                    <div class="p-3">
+                        <h5>Weather Forecast App</h5>
+                        <p class="text-muted">React Native, API Integration</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop" alt="Social Media Dashboard">
-                        <div class="portfolio-overlay">
-                            <a href="#" class="btn btn-light btn-sm">View Live</a>
-                            <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
-                        </div>
-                        <div class="p-3">
-                            <h5>Social Media Dashboard</h5>
-                            <p class="text-muted">Angular, D3.js, Firebase</p>
-                        </div>
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop" alt="Social Media Dashboard">
+                    <div class="portfolio-overlay">
+                        <a href="#" class="btn btn-light btn-sm">View Live</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
+                    </div>
+                    <div class="p-3">
+                        <h5>Social Media Dashboard</h5>
+                        <p class="text-muted">Angular, D3.js, Firebase</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1486312338219-ce68e2c6f44d?w=400&h=250&fit=crop" alt="Blog Platform">
-                        <div class="portfolio-overlay">
-                            <a href="#" class="btn btn-light btn-sm">View Live</a>
-                            <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
-                        </div>
-                        <div class="p-3">
-                            <h5>Blog Platform</h5>
-                            <p class="text-muted">Next.js, Strapi, PostgreSQL</p>
-                        </div>
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68e2c6f44d?w=400&h=250&fit=crop" alt="Blog Platform">
+                    <div class="portfolio-overlay">
+                        <a href="#" class="btn btn-light btn-sm">View Live</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">Source Code</a>
+                    </div>
+                    <div class="p-3">
+                        <h5>Blog Platform</h5>
+                        <p class="text-muted">Next.js, Strapi, PostgreSQL</p>
                     </div>
                 </div>
             </div>
@@ -223,9 +228,9 @@
                             <strong>Availability:</strong> Mon - Fri, 9AM - 3PM 
                         </div>
                         <div class="social-links">
-                            <a href="https://www.linkedin.com/in/solomon-igila-0751892a7/"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/Ter0810"><i class="fab fa-github"></i></a>
-                            <a href="https://www.instagram.com/igilaterngu/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/solomon-igila-0751892a7/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Ter0810" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/igilaterngu/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -261,12 +266,14 @@
         </div>
     </footer>
 
+    <!-- Notification Toast -->
+    <div id="notification" class="notification"></div>
+
     <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-    
     <script src="app.js"></script>
 </body>
 </html>
